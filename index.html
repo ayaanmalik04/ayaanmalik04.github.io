@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name</title>
+    <title>Ayaan Naveed Malik</title>
     <style>
         * {
           margin: 0;
@@ -76,6 +76,22 @@
           font-weight: 600;
           margin-bottom: 4px;
           color: #000;
+        }
+
+        .project h3 a {
+          color: #000;
+          text-decoration: none;
+        }
+
+        .project h3 a:hover {
+          text-decoration: underline;
+        }
+
+        .project .role {
+          font-size: 15px;
+          font-style: italic;
+          color: #888;
+          margin-bottom: 6px;
         }
 
         .project-links {
@@ -151,6 +167,22 @@
         <section class="section">
             <h2>About</h2>
             <p>I’m a senior at Stanford passionate about multimodality, world models, and physical AI. I’m currently a student researcher at NVIDIA’s GEAR Lab, where I work on SOTA robotics foundation models,  world models, and everything in between. None of this would have been possible without the incredible mentors who have believed in me and guided me along the way—particularly Kezhen Chen, Joel Jang, and Jim Fan.</p>
+        </section>
+
+        <section class="section">
+            <h2>Work</h2>
+
+            <div class="project">
+                <h3><a href="https://dreamzero0.github.io/">DreamZero: World Action Models are Zero-shot Policies</a></h3>
+                <p class="role">Core Contributor</p>
+                <p>A World Action Model built on a pretrained video diffusion backbone that jointly predicts future world states and actions, achieving over 2x improvement in generalization to new tasks and environments compared to state-of-the-art VLAs in real-robot experiments, with real-time closed-loop control at 7Hz.</p>
+            </div>
+
+            <div class="project">
+                <h3><a href="https://dreamdojo-world.github.io/">DreamDojo: A Generalist Robot World Model from Large-Scale Human Videos</a></h3>
+                <p class="role">Core Contributor</p>
+                <p>A foundation world model pretrained on 44k hours of diverse human egocentric videos—the largest dataset to date for world model pretraining—that demonstrates strong generalization to diverse objects and environments, with stable real-time interactions at 10 FPS for over 1 minute after distillation.</p>
+            </div>
         </section>
 
         <section class="section">
