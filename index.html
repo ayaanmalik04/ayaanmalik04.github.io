@@ -68,7 +68,22 @@
         }
 
         .project {
-          margin-bottom: 24px;
+          margin-bottom: 28px;
+        }
+
+        .project.with-video {
+          display: flex;
+          gap: 16px;
+          align-items: flex-start;
+        }
+
+        .project.with-video video {
+          flex-shrink: 0;
+        }
+
+        .project .project-text {
+          flex: 1;
+          min-width: 0;
         }
 
         .project h3 {
@@ -116,10 +131,8 @@
         }
 
         .project video {
-          width: 100%;
-          max-width: 480px;
-          border-radius: 8px;
-          margin-top: 10px;
+          width: 200px;
+          border-radius: 6px;
           display: block;
         }
 
@@ -162,13 +175,21 @@
             flex-direction: column;
             gap: 8px;
           }
+
+          .project.with-video {
+            flex-direction: column;
+          }
+
+          .project video {
+            width: 100%;
+          }
         }
     </style>
 </head>
 <body>
     <header>
         <h1>Ayaan Naveed Malik</h1>
-        <p class="tagline">Student Researcher | NVIDIA GEAR Lab</p>
+        <p class="tagline">CS, Math & Phil @ Stanford | NVIDIA</p>
     </header>
 
     <main>
@@ -180,22 +201,26 @@
         <section class="section">
             <h2>Work</h2>
 
-            <div class="project">
-                <h3><a href="https://dreamzero0.github.io/">DreamZero: World Action Models are Zero-shot Policies</a></h3>
-                <p class="role">Core Contributor</p>
-                <p>A World Action Model built on a pretrained video diffusion backbone that jointly predicts future world states and actions, achieving over 2x improvement in generalization to new tasks and environments compared to state-of-the-art VLAs in real-robot experiments, with real-time closed-loop control at 7Hz.</p>
+            <div class="project with-video">
                 <video autoplay loop muted playsinline>
                     <source src="dreamzero_teaser.mp4" type="video/mp4">
                 </video>
+                <div class="project-text">
+                    <h3><a href="https://dreamzero0.github.io/">DreamZero: World Action Models are Zero-shot Policies</a></h3>
+                    <p class="role">Core Contributor</p>
+                    <p>A World Action Model built on a pretrained video diffusion backbone that jointly predicts future world states and actions, achieving over 2x improvement in generalization to new tasks and environments compared to state-of-the-art VLAs in real-robot experiments, with real-time closed-loop control at 7Hz.</p>
+                </div>
             </div>
 
-            <div class="project">
-                <h3><a href="https://dreamdojo-world.github.io/">DreamDojo: A Generalist Robot World Model from Large-Scale Human Videos</a></h3>
-                <p class="role">Core Contributor</p>
-                <p>A foundation world model pretrained on 44k hours of diverse human egocentric videos—the largest dataset to date for world model pretraining—that demonstrates strong generalization to diverse objects and environments, with stable real-time interactions at 10 FPS for over 1 minute after distillation.</p>
+            <div class="project with-video">
                 <video autoplay loop muted playsinline>
                     <source src="dreamdojo_teaser.mp4" type="video/mp4">
                 </video>
+                <div class="project-text">
+                    <h3><a href="https://dreamdojo-world.github.io/">DreamDojo: A Generalist Robot World Model from Large-Scale Human Videos</a></h3>
+                    <p class="role">Core Contributor</p>
+                    <p>A foundation world model pretrained on 44k hours of diverse human egocentric videos—the largest dataset to date for world model pretraining—that demonstrates strong generalization to diverse objects and environments, with stable real-time interactions at 10 FPS for over 1 minute after distillation.</p>
+                </div>
             </div>
         </section>
 
